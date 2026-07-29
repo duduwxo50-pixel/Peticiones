@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#6d4c2f">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2a2118">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#c4602f">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#191210">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -13,69 +13,80 @@
 <link rel="manifest" id="manifestLink">
 <link rel="icon" id="faviconLink">
 <link rel="apple-touch-icon" id="appleIconLink">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2ede3;
-    --text: #362c22;
-    --text-soft: #8a8375;
-    --card-bg: #ffffff;
-    --card-answered-bg: #eef6ec;
-    --accent: #6d4c2f;
-    --accent-2: #8a6d4e;
-    --tab-bg: #e9e1d1;
-    --chip-bg: #f2ede3;
-    --chip-text: #7a6f5c;
-    --chip-answered-bg: #dcecd6;
-    --chip-answered-text: #3f6b31;
-    --check-bg: #cfe6c4;
-    --check-text: #2f5423;
-    --check-done-bg: #ece7da;
-    --check-done-text: #7a6f5c;
-    --del-bg: #f9e3e3;
-    --del-text: #8a2f2f;
-    --border: #eae3d5;
-    --input-bg: #faf8f3;
-    --overlay: rgba(0,0,0,0.45);
-    --modal-bg: #ffffff;
-    --toast-bg: #362c22;
-    --toast-text: #ffffff;
-    --error-bg: #f9e0e0;
-    --error-text: #7a2e2e;
-    --empty-text: #a39c8c;
-    --skeleton-a: #ece6d8;
-    --skeleton-b: #f7f3e9;
+    --bg: #fbf3ea;
+    --bg-2: #f6e8da;
+    --text: #3a2a1e;
+    --text-soft: #93816e;
+    --card-bg: #fffdf9;
+    --card-answered-bg: #eef3e4;
+    --accent: #c4602f;
+    --accent-2: #e08a3e;
+    --gold: #d6a84a;
+    --dusk: #7a4f7d;
+    --tab-bg: #f0e2cf;
+    --chip-bg: #f6ecdd;
+    --chip-text: #8a6a4a;
+    --chip-answered-bg: #dfe9cd;
+    --chip-answered-text: #4c6b2f;
+    --check-bg: #dcead0;
+    --check-text: #33541f;
+    --check-done-bg: #f0ebdd;
+    --check-done-text: #8a6a4a;
+    --del-bg: #fbe2df;
+    --del-text: #96382b;
+    --border: #ecdcc4;
+    --input-bg: #fffaf3;
+    --overlay: rgba(35,20,10,0.5);
+    --modal-bg: #fffdf9;
+    --toast-bg: #3a2a1e;
+    --toast-text: #fbf3ea;
+    --error-bg: #fbe2df;
+    --error-text: #8a2e20;
+    --empty-text: #b09b80;
+    --skeleton-a: #f1e4d0;
+    --skeleton-b: #faf1e3;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Manrope', 'Segoe UI', Roboto, -apple-system, Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #18140f;
-      --text: #f0e9dc;
-      --text-soft: #a99f8c;
-      --card-bg: #251e16;
-      --card-answered-bg: #1c2818;
-      --accent: #d3a878;
-      --accent-2: #c19768;
-      --tab-bg: #251e16;
-      --chip-bg: #2e2519;
-      --chip-text: #c7bca8;
-      --chip-answered-bg: #24331d;
-      --chip-answered-text: #9fd48b;
-      --check-bg: #2f4227;
-      --check-text: #bfe6ab;
-      --check-done-bg: #2e2519;
-      --check-done-text: #a99f8c;
-      --del-bg: #3a2323;
-      --del-text: #e6a3a3;
-      --border: #382e21;
-      --input-bg: #201a13;
-      --overlay: rgba(0,0,0,0.65);
-      --modal-bg: #201a13;
+      --bg: #191210;
+      --bg-2: #221714;
+      --text: #f3e9dc;
+      --text-soft: #b3a08a;
+      --card-bg: #241a15;
+      --card-answered-bg: #1d2417;
+      --accent: #ec8c53;
+      --accent-2: #e6a15c;
+      --gold: #e6be79;
+      --dusk: #b98abc;
+      --tab-bg: #241a15;
+      --chip-bg: #2c2019;
+      --chip-text: #d3bd9f;
+      --chip-answered-bg: #263320;
+      --chip-answered-text: #a8d48b;
+      --check-bg: #2c4023;
+      --check-text: #c3e6ab;
+      --check-done-bg: #2c2019;
+      --check-done-text: #b3a08a;
+      --del-bg: #3c2420;
+      --del-text: #eba396;
+      --border: #3a2c22;
+      --input-bg: #201712;
+      --overlay: rgba(0,0,0,0.7);
+      --modal-bg: #201712;
       --toast-bg: #000000;
       --toast-text: #ffffff;
-      --error-bg: #3a2323;
-      --error-text: #e6a3a3;
-      --empty-text: #7a7264;
-      --skeleton-a: #2a2218;
-      --skeleton-b: #33291c;
+      --error-bg: #3c2420;
+      --error-text: #eba396;
+      --empty-text: #8a7a64;
+      --skeleton-a: #2a1f18;
+      --skeleton-b: #34271d;
     }
   }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -84,7 +95,7 @@
     margin: 0;
     padding: 0;
     background: var(--bg);
-    font-family: 'Segoe UI', Roboto, -apple-system, Arial, sans-serif;
+    font-family: var(--font-body);
     color: var(--text);
     overscroll-behavior-y: contain;
   }
@@ -92,16 +103,46 @@
 
   /* Header */
   .appbar {
-    background: linear-gradient(135deg, #6d4c2f, #8a6d4e);
+    background: linear-gradient(160deg, var(--accent) 0%, var(--accent-2) 55%, var(--gold) 130%);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease-in-out infinite;
     color: #fff;
-    padding: calc(env(safe-area-inset-top, 0px) + 22px) 20px 26px;
+    padding: calc(env(safe-area-inset-top, 0px) + 26px) 20px 34px;
     text-align: center;
-    border-radius: 0 0 22px 22px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 10px 24px -6px rgba(196,96,47,0.45);
     position: relative;
+    overflow: hidden;
   }
-  .appbar h1 { margin: 0; font-size: 21px; font-weight: 700; letter-spacing: 0.2px; }
-  .appbar p { margin: 6px 0 0; font-size: 13px; opacity: 0.85; }
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 30%; }
+    50% { background-position: 100% 70%; }
+  }
+  .appbar::before {
+    content: '';
+    position: absolute;
+    inset: -40% -20% auto -20%;
+    height: 160%;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.25), transparent 55%),
+                radial-gradient(circle at 80% 60%, rgba(255,255,255,0.16), transparent 50%);
+    pointer-events: none;
+    animation: driftGlow 14s ease-in-out infinite;
+  }
+  @keyframes driftGlow {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(3%, 2%) scale(1.08); }
+  }
+  .appbar h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 25px;
+    font-weight: 650;
+    letter-spacing: 0.1px;
+    position: relative;
+    animation: riseIn 0.5s ease both;
+  }
+  .appbar p { margin: 7px 0 0; font-size: 13.5px; opacity: 0.92; position: relative; animation: riseIn 0.5s 0.08s ease both; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
   .container { max-width: 560px; margin: 0 auto; padding: 16px; }
 
@@ -149,25 +190,44 @@
   .install-banner .ib-dismiss { background: transparent; color: var(--text-soft); padding: 9px 8px; }
 
   /* Stats */
-  .stats { display: flex; gap: 10px; margin: -34px 0 18px; }
+  .stats { display: flex; gap: 10px; margin: -40px 0 18px; position: relative; z-index: 2; }
   .stat-card {
     flex: 1;
     background: var(--card-bg);
-    border-radius: 16px;
-    padding: 14px 10px;
+    border-radius: 18px;
+    padding: 16px 10px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px -6px rgba(60,30,10,0.18);
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: popIn 0.4s ease both;
   }
-  .stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
-  .stat-label { font-size: 11px; color: var(--text-soft); margin-top: 2px; }
+  .stat-card:nth-child(2) { animation-delay: 0.06s; }
+  .stat-card:active { transform: scale(0.97); }
+  @keyframes popIn { from { opacity: 0; transform: translateY(10px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 25px;
+    font-weight: 650;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.25s ease;
+    display: inline-block;
+  }
+  .stat-num.bump { animation: bump 0.35s ease; }
+  @keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.3); } 100% { transform: scale(1); } }
+  .stat-label { font-size: 11px; color: var(--text-soft); margin-top: 3px; font-weight: 600; letter-spacing: 0.2px; }
 
   /* Tabs */
   .tabs {
     display: flex;
     background: var(--tab-bg);
-    border-radius: 14px;
+    border-radius: 15px;
     padding: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    position: relative;
   }
   .tab-btn {
     flex: 1;
@@ -178,11 +238,24 @@
     background: transparent;
     color: var(--text-soft);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1;
+    transition: color 0.25s ease;
   }
-  .tab-btn.active { background: var(--card-bg); color: var(--accent); box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  .tab-btn.active { color: var(--accent); }
+  .tab-indicator {
+    position: absolute;
+    top: 4px; bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    background: var(--card-bg);
+    border-radius: 11px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.28s cubic-bezier(.4,0,.2,1);
+  }
+  .tab-indicator.right { transform: translateX(100%); }
 
   /* Swipe wrapper */
   .swipe-item { position: relative; border-radius: 16px; margin-bottom: 12px; overflow: hidden; }
@@ -200,19 +273,31 @@
   .card {
     position: relative;
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    animation: fadeIn 0.25s ease;
+    border: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(60,30,10,0.06);
+    animation: fadeIn 0.35s cubic-bezier(.2,.7,.3,1) both;
     touch-action: pan-y;
     will-change: transform;
   }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-  .card.answered { background: var(--card-answered-bg); }
-  .peticion-text { font-size: 15.5px; margin: 0 0 10px; line-height: 1.5; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px) scale(0.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  .card.answered {
+    background: var(--card-answered-bg);
+    border-color: color-mix(in srgb, var(--chip-answered-text) 25%, var(--border));
+  }
+  .card.answered::before {
+    content: '✨';
+    position: absolute;
+    top: 12px; right: 14px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .peticion-text { font-size: 15.5px; margin: 0 0 10px; line-height: 1.55; font-weight: 500; }
   .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .chip {
     font-size: 11.5px;
+    font-weight: 600;
     background: var(--chip-bg);
     color: var(--chip-text);
     padding: 4px 10px;
@@ -238,7 +323,7 @@
     overflow: hidden;
   }
   .check-btn:active, .del-btn:active { transform: scale(0.96); }
-  .check-btn { background: var(--check-bg); color: var(--check-text); }
+  .check-btn { background: var(--check-bg); color: var(--check-text); box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03); }
   .check-btn.done { background: var(--check-done-bg); color: var(--check-done-text); flex: 1; }
   .del-btn { background: var(--del-bg); color: var(--del-text); flex: none; width: 50px; }
 
@@ -252,8 +337,9 @@
   }
   @keyframes ripple { to { transform: scale(2.6); opacity: 0; } }
 
-  .empty { text-align: center; color: var(--empty-text); padding: 60px 20px; }
-  .empty i { font-size: 42px; display: block; margin-bottom: 10px; opacity: 0.5; }
+  .empty { text-align: center; color: var(--empty-text); padding: 60px 20px; animation: fadeIn 0.4s ease both; font-weight: 600; font-size: 14px; line-height: 1.6; }
+  .empty i { font-size: 46px; display: block; margin-bottom: 12px; opacity: 0.6; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
   /* Skeleton */
   .skeleton-card {
@@ -292,14 +378,14 @@
     position: fixed;
     right: 20px;
     bottom: calc(env(safe-area-inset-bottom, 0px) + 22px);
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
     color: #fff;
     border: none;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     font-size: 28px;
-    box-shadow: 0 4px 14px rgba(109,76,47,0.45);
+    box-shadow: 0 6px 18px -2px rgba(196,96,47,0.55);
     cursor: pointer;
     z-index: 20;
     display: flex;
@@ -307,8 +393,13 @@
     justify-content: center;
     transition: transform 0.15s ease;
     overflow: hidden;
+    animation: fabPulse 2.6s ease-in-out infinite;
   }
-  .fab:active { transform: scale(0.9); }
+  @keyframes fabPulse {
+    0%, 100% { box-shadow: 0 6px 18px -2px rgba(196,96,47,0.55); }
+    50% { box-shadow: 0 6px 22px 2px rgba(196,96,47,0.75); }
+  }
+  .fab:active { transform: scale(0.9); animation: none; }
 
   /* Bottom sheet modal */
   .modal-overlay {
@@ -334,7 +425,7 @@
   }
   @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
   .modal-handle { width: 40px; height: 4px; background: var(--border); border-radius: 4px; margin: 0 auto 14px; }
-  .modal h2 { margin: 0 0 4px; font-size: 19px; color: var(--text); }
+  .modal h2 { margin: 0 0 4px; font-family: var(--font-display); font-size: 22px; font-weight: 650; color: var(--text); }
   .modal .modal-sub { font-size: 13px; color: var(--text-soft); margin-bottom: 16px; }
   .modal label { font-size: 13px; color: var(--text-soft); font-weight: 600; display: block; margin: 14px 0 6px; }
   .modal textarea, .modal input[type="date"], .modal input[type="text"] {
@@ -362,8 +453,9 @@
     cursor: pointer;
     font-weight: 700;
   }
-  .btn-cancel { background: var(--tab-bg); color: var(--text-soft); }
-  .btn-save { background: var(--accent); color: #fff; }
+  .btn-cancel { background: var(--tab-bg); color: var(--text-soft); transition: transform 0.1s ease; }
+  .btn-save { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; transition: transform 0.1s ease; }
+  .btn-cancel:active, .btn-save:active { transform: scale(0.97); }
   .btn-save:disabled { opacity: 0.6; }
 
   /* Toast / Snackbar */
@@ -437,6 +529,7 @@
   <div id="errorBox"></div>
 
   <div class="tabs">
+    <div class="tab-indicator" id="tabIndicator"></div>
     <button class="tab-btn active" id="tabPend" onclick="switchTab('pendientes')">Pendientes</button>
     <button class="tab-btn" id="tabResp" onclick="switchTab('respondidas')">Respondidas</button>
   </div>
@@ -765,9 +858,19 @@ async function toggleRespondida(id) {
   }
 }
 
-/* ============ ELIMINAR CON DESHACER ============ */
+/* ============ ELIMINAR CON DESHACER (protegido con clave) ============ */
+// Puedes cambiar esta clave por la que prefieras
+const CLAVE_ELIMINAR = '1234';
+
 const pendingDeletes = {};
 function solicitarEliminar(id) {
+  const clave = prompt('🔒 Ingresa la clave para eliminar esta petición:');
+  if (clave === null) { render(); return; } // canceló, restaura la tarjeta
+  if (clave !== CLAVE_ELIMINAR) {
+    showSnackbar('Clave incorrecta. No se eliminó.');
+    render();
+    return;
+  }
   const idx = peticiones.findIndex(x => String(x.id) === String(id));
   if (idx === -1) return;
   const item = peticiones[idx];
@@ -802,7 +905,18 @@ function switchTab(tab) {
   tabActual = tab;
   document.getElementById('tabPend').classList.toggle('active', tab === 'pendientes');
   document.getElementById('tabResp').classList.toggle('active', tab === 'respondidas');
+  document.getElementById('tabIndicator').classList.toggle('right', tab === 'respondidas');
   render();
+}
+
+function actualizarStat(id, valor) {
+  const el = document.getElementById(id);
+  if (el.textContent !== String(valor)) {
+    el.textContent = valor;
+    el.classList.remove('bump');
+    void el.offsetWidth;
+    el.classList.add('bump');
+  }
 }
 
 /* ============ RENDER ============ */
@@ -811,8 +925,8 @@ function render() {
   const pendientes = peticiones.filter(p => !p.respondida);
   const respondidas = peticiones.filter(p => p.respondida);
 
-  document.getElementById('statPend').textContent = pendientes.length;
-  document.getElementById('statResp').textContent = respondidas.length;
+  actualizarStat('statPend', pendientes.length);
+  actualizarStat('statResp', respondidas.length);
 
   const filtradas = tabActual === 'pendientes' ? pendientes : respondidas;
 
@@ -826,16 +940,16 @@ function render() {
     return;
   }
 
-  lista.innerHTML = filtradas.map(p => `
+  lista.innerHTML = filtradas.map((p, i) => `
     <div class="swipe-item" data-id="${p.id}">
       <div class="swipe-bg right-action">✓ Cumplida</div>
       <div class="swipe-bg left-action">Eliminar 🗑</div>
-      <div class="card ${p.respondida ? 'answered' : ''}" data-id="${p.id}">
+      <div class="card ${p.respondida ? 'answered' : ''}" data-id="${p.id}" style="animation-delay:${Math.min(i * 0.05, 0.4)}s">
         <p class="peticion-text">${escapeHtml(p.texto)}</p>
         <div class="meta">
           <span class="chip">${p.nombre ? escapeHtml(p.nombre) : 'Anónimo'}</span>
-          ${p.fecha ? `<span class="chip">📅 ${p.fecha}</span>` : ''}
-          <span class="chip">🕓 ${p.creada}</span>
+          ${p.fecha ? `<span class="chip">📅 ${formatFecha(p.fecha)}</span>` : ''}
+          <span class="chip">🕓 ${formatFecha(p.creada)}</span>
         </div>
         <div class="actions">
           <button class="check-btn ${p.respondida ? 'done' : ''}" onclick="agregarRipple(this,event); toggleRespondida('${p.id}')">
@@ -848,6 +962,13 @@ function render() {
   `).join('');
 
   attachSwipeHandlers();
+}
+
+function formatFecha(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleDateString('es-CO', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
 function escapeHtml(str) {
