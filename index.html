@@ -536,13 +536,17 @@ const manifest = {
 const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
 document.getElementById('manifestLink').setAttribute('href', URL.createObjectURL(manifestBlob));
 
-/* ============ SERVICE WORKER (offline) ============ */
+/* ============ LIMPIEZA DE SERVICE WORKERS/CACHÉ VIEJOS ============ */
+// Nota: se quitó el registro de sw.js (no está publicado) y en su lugar
+// se desregistra cualquier service worker anterior que haya quedado
+// atascado sirviendo una versión vieja/cacheada de esta página.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(() => {
-      // Si el archivo sw.js no está publicado junto a este HTML, se ignora
-    });
-  });
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(reg => reg.unregister());
+  }).catch(() => {});
+}
+if (window.caches) {
+  caches.keys().then(keys => keys.forEach(k => caches.delete(k))).catch(() => {});
 }
 
 /* ============ INSTALAR EN ANDROID ============ */
@@ -626,13 +630,16 @@ async function cargarPeticiones(silencioso) {
     if (!res.ok) throw new Error('Respuesta no válida del servidor');
     peticiones = await res.json();
     limpiarError();
+    cargaInicial = false;
     render();
   } catch (err) {
-    mostrarError('No se pudieron cargar las peticiones. Revisa tu conexión.');
-    if (!silencioso) document.getElementById('lista').innerHTML = '';
-    console.error(err);
-  } finally {
+    mostrarError('No se pudieron cargar las peticiones. Revisa tu conexión o desliza para reintentar.');
     cargaInicial = false;
+    if (!silencioso) {
+      document.getElementById('lista').innerHTML =
+        '<div class="empty">⚠️ No se pudo conectar.<br>Desliza hacia abajo para reintentar.</div>';
+    }
+    console.error(err);
   }
 }
 
