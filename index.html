@@ -746,7 +746,7 @@ async function guardarPeticion(ev) {
 
 /* ============ MARCAR / REABRIR ============ */
 async function toggleRespondida(id) {
-  const p = peticiones.find(x => x.id === id);
+  const p = peticiones.find(x => String(x.id) === String(id));
   const nuevoEstado = p ? !p.respondida : true;
   if (p) p.respondida = nuevoEstado; // optimista
   render();
@@ -768,7 +768,7 @@ async function toggleRespondida(id) {
 /* ============ ELIMINAR CON DESHACER ============ */
 const pendingDeletes = {};
 function solicitarEliminar(id) {
-  const idx = peticiones.findIndex(x => x.id === id);
+  const idx = peticiones.findIndex(x => String(x.id) === String(id));
   if (idx === -1) return;
   const item = peticiones[idx];
   peticiones.splice(idx, 1);
